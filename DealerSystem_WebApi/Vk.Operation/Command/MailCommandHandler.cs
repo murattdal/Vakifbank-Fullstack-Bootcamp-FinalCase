@@ -15,12 +15,12 @@ public class MailCommandHandler :
     {
         MailMessage myMessage = new MailMessage();
         SmtpClient client = new SmtpClient();
-        client.Credentials = new System.Net.NetworkCredential("hastanekayitsistemi@outlook.com", "Wasd1234?");
+        client.Credentials = new System.Net.NetworkCredential("dealersystem@outlook.com", "Wasd1234?");
         client.Port = 587;
         client.Host = "smtp-mail.outlook.com";
         client.EnableSsl = true;
         myMessage.To.Add(request.Model.Email);
-        myMessage.From = new MailAddress("hastanekayitsistemi@outlook.com");
+        myMessage.From = new MailAddress("dealersystem@outlook.com");
         myMessage.Subject = request.Model.Name;
         myMessage.Body = request.Model.Description;
 
