@@ -21,17 +21,20 @@ Bayi Sistemi, dinamik stok yönetimi, sipariş işlemleri ve admin onay süreçl
 ## Ekran Görüntüleri
 
 
-![ScreenShot_1](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/e71bd4f5-b5fc-47dc-b03e-e89674d85fe7)
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/4820e8ee-e58b-4843-8d6c-ddac992e4577)
 <p align="center"> <strong>Şekil 1:</strong> İlk Giriş Ekranı </p>
 
-![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/5c436bf2-99db-4072-bbf4-89416bbab5b8)
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/c6cbe2b4-d80c-4ec8-b201-26e4bb65d00a)
 <p align="center">  <strong>Şekil 2:</strong> Yönetici Paneli </p>
 
-![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/63636303-75af-456e-b127-c887e2ada83b)
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/6ff004f8-80b3-471c-a658-5753e3d4236d)
 <p align="center">  <strong>Şekil 3:</strong> Kullanıcı Paneli </p>
 
-![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/c94027b1-1489-4a8d-ba58-892d4796c3f0)
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/b1cf6038-a941-4008-822f-6c4d5315f04c)
 <p align="center">  <strong>Şekil 4:</strong> Swagger Paneli </p>
 
-![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/83c6cede-6163-4e3e-bf0b-d6b544f14b49)
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/2313a3f5-3273-4cd3-806b-b79cd5abaeb2)
 <p align="center">  <strong>Şekil 5:</strong> Veri Tabanı Tabloları ve Bağlantıları </p>
+
+![image](https://github.com/murattdal/Vakifbank-Fullstack-Bootcamp-FinalCase/assets/69681710/87081930-6086-41e2-907d-616687fddb7c)
+<p align="center">  <strong>Şekil 6:</strong> Web Api Kullanılan Katmanlı Mimari </p>
