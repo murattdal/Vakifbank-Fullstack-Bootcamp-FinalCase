@@ -1,0 +1,111 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-20 py-5 fixed-nav">
+  <h3 class="w-2/12" style="width: 130px;" alt="logo">
+    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+    <span style="font-size: 1.5 em; color: #ff6219;">Bayi Sistemi</span>
+  </h3>
+
+  <!-- Navigation -->
+  <nav class="nav font-semibold text-lg w-6/12">
+    <ul class="flex items-center justify-around">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerPage">Anasayfa</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerOrders">Siparişlerim</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerMail">Mail gönderme</a>
+      </li>
+      <li></li>
+    </ul>
+  </nav>
+
+  <!-- Buttons -->
+  <div class="w-4/12 flex justify-end items-center space-x-6">
+    <button routerLink="/DealerPayment" type="button" class="btn btn-success">
+      <i></i> Ödeme adımına git
+    </button>
+    &nbsp;&nbsp;
+    <button (click)="logout()" class="btn btn-danger">
+      <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+    </button>
+  </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+
+    <div class="card-body">
+      <div id="table" class="table-editable">
+       
+        <h2 style="text-align: center;"> Bekleyen Siparişler </h2>
+
+        <table class="table table-bordered table-responsive-md table-striped text-center" style="margin-top: 2%; margin-bottom: 2%;">
+          <thead>
+            <tr>
+              <th class="text-center">Sipariş İd</th>
+              <th class="text-center">User ID</th>
+              <th scope="col">Order Amount</th>
+              <th scope="col">Order Status</th>
+
+              <th class="text-center">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of waitingOrders">
+              <td class="pt-3-half" contenteditable="true">{{ order.id }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.userId }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.orderAmount }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.orderStatus }}</td>
+           
+              <td>
+                <span class="table-remove"
+                  ><button  type="button" class="btn btn-danger btn-rounded btn-sm my-0" (click)="deleteOrder(order)">
+                    İPTAL
+                  </button></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+        <h2 style="text-align: center;"> Tamamlanmış Siparişler </h2>
+        <table class="table table-bordered table-responsive-md table-striped text-center" style="margin-top: 2%;">
+          <thead>
+            <tr>
+              <th class="text-center">Sipariş İd</th>
+              <th class="text-center">User ID</th>
+              <th scope="col">Order Amount</th>
+              <th scope="col">Order Status</th>
+
+        
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of completedOrders">
+              <td class="pt-3-half" contenteditable="true">{{ order.id }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.userId }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.orderAmount }}</td>
+              <td class="pt-3-half" contenteditable="true">{{ order.orderStatus }}</td>
+           
+           
+            </tr>
+            <!-- This is our clonable table line -->
+         
+      
+       
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>

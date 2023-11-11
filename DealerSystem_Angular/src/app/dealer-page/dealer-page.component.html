@@ -1,0 +1,79 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-20 py-5 fixed-nav">
+  <h3 class="w-2/12" style="width: 130px;" alt="logo">
+    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+    <span style="font-size: 1.5 em; color: #ff6219;">Bayi Sistemi</span>
+  </h3>
+
+  <!-- Navigation -->
+  <nav class="nav font-semibold text-lg w-6/12">
+    <ul class="flex items-center justify-around">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerPage">Anasayfa</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerOrders">Siparişlerim</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer"
+          routerLink="/DealerMail">Mail gönderme</a>
+      </li>
+      <li></li>
+    </ul>
+  </nav>
+
+  <!-- Buttons -->
+  <div class="w-4/12 flex justify-end items-center space-x-6">
+    <button routerLink="/DealerPayment" type="button" class="btn btn-success">
+      <i></i> Ödeme adımına git
+    </button>
+    &nbsp;&nbsp;
+    <button (click)="logout()" class="btn btn-danger">
+      <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+    </button>
+  </div>
+</header>
+
+<div class="container">
+  <div class="container text-center"></div>
+
+  <div class="shell">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let product of products">
+          <div class="wsk-cp-product">
+            <img src="{{product.productImage}}"  width="500" height="600">
+            <div class="wsk-cp-text">
+              <div class="category">
+                <button type="button" (click)="addToBasket(product)" class="bbtn btn-success">
+                  <i class="fa fa-shopping-cart"> </i>
+                </button>
+              </div>
+              <div class="title-product">
+                <h3>{{product.productName}}</h3>
+              </div>
+              <div class="description-prod">
+                <p>{{product.productInformation}}</p>
+              </div>
+              <div class="description-prod">
+                <p>Stok Adedi</p>
+                <b>{{product.productQuantity}}</b>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left">
+                  <span class="price">Fiyat: </span>
+                  <span class="price">{{product.productPrice}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+</div>

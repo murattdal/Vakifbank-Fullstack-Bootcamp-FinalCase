@@ -1,0 +1,83 @@
+<div class="card">
+    <div class="card-top border-bottom text-center">
+         
+        <span id="logo">Bayi Sistemi</span>
+    </div>
+    <div class="card-body">
+        <div class="row upper">
+            
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="left border">
+                    <div class="row">
+                        <span class="header">Ödeme</span>
+                        <div class="icons">
+                            <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                            <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                            <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
+                            
+                        </div>
+                        <select class="form-control mt-3" id="paymentMethod" [(ngModel)]="selectedPaymentMethod" name="paymentMethod" required>
+                            <option value="" disabled selected>Lütfen ödeme türünü seçiniz</option>
+                            <option value="kredi_karti">Kredi Kartı</option>
+                            <option value="havale">Havale</option>
+                            <option value="eft">EFT</option>
+                        </select>                       
+                        
+                    </div>
+                    <form>
+                        <span>Kart sahibinin adı:</span>
+                        <input placeholder="Murat DAL" readonly>
+                        <span>Kart Numarası:</span>
+                        <input placeholder="0125 6780 4567 9909" readonly>
+                        <div class="row">
+                          <div class="col-4">
+                            <span>Son kullanma tarihi:</span>
+                            <input placeholder="YY/MM" readonly>
+                          </div>
+                          <div class="col-4">
+                            <span>CVV:</span>
+                            <input id="cvv" readonly>
+                          </div>
+                        </div>
+                        <input type="checkbox" id="save_card" class="align-left" disabled>
+                        &nbsp;
+                        <label for="save_card"> Kart Bilgilerimin Doğruluğunu Onaylıyorum</label>
+                      </form>
+                      
+                    &nbsp;&nbsp;
+        <button routerLink="/DealerPage" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Ana Sayfaya Dön</button>
+                    
+                </div>                        
+            </div>
+            <div class="col-md-5">
+                <div class="right border">
+                    <div class="header">Sipariş Özeti</div>
+                    <p>Ürünler</p>
+                    
+                    <div class="row item" *ngFor="let basket of baskets">
+                        <div class="col-4 align-self-center"><img class="img-fluid" src="https://e7.pngegg.com/pngimages/1008/303/png-clipart-shopping-cart-icon-product-return-shopping-cart-retail-supermarket-thumbnail.png"></div>
+                        <div class="col-8">
+                            <div class="row"><b>Fiyatı: {{basket.basketPrice}}</b></div>
+                            <div class="row text-muted">{{basket.productName}}</div>
+                            <div class="row">Miktar:1</div>
+                        </div>
+                    </div>
+                    <hr>
+                   
+                
+                    <div class="row lower">
+                        <div class="col text-left"><b>Toplam ödeme</b></div>
+                        <div class="col text-right"><b> {{ getTotalPrice() }}</b></div>
+                    </div>
+                    <button (click)="makePayment()" class="btn">Ödeme Yap</button>
+                    <p class="text-muted text-center">Ücretsiz Kargo ve İade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <div>
+</div>
+</div>

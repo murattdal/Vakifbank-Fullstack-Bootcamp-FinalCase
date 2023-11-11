@@ -1,0 +1,119 @@
+<!-- Font Awesome Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-qFviL5ONzNlV02GYi+P5H2/Wl2qRjU6g0BpHL1zmeGk9lreG9oIAGToG1vbACvz5Xqg1d+ZQ6eC1FYgFzsFaSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Header -->
+<header>
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a routerLink="/AdminPage" href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Anasayfa</span>
+        </a>
+
+        <a routerLink="/AdminStockControl" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Stok Kontrolü</span>
+        </a>
+
+        <a routerLink="/AdminProductAdd" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-plus fa-fw me-3"></i><span>Ürün Ekleme</span>
+        </a>
+
+        <a routerLink="/AdminInfo" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-bar fa-fw me-3"></i><span>Rapor</span>
+        </a>
+
+        <a routerLink="/AdminDealerInquiry" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-building fa-fw me-3"></i><span>Bayiler</span>
+        </a>
+
+        <a routerLink="/AdminDealerAdd" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-plus fa-fw me-3"></i><span>Bayi Ekleme</span>
+        </a>
+
+        <a routerLink="/AdminMail" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-envelope fa-fw me-3"></i><span>Mail Gönderme</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <h6 class="w-2/12 text-center" style="width: 100px;" alt="logo">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+          <span style="font-size: 1.5 em; color: #ff6219;">YÖNETİCİ PANELİ</span>
+        </div>
+      </h6>
+
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <li class="nav-item dropdown">
+          <a routerLink="/AdminPage" class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="https://firebasestorage.googleapis.com/v0/b/socialuni-5ab73.appspot.com/o/assets%2Ficons%2Fic_avatar6.png?alt=media&token=aa9b868c-b5ac-4cb1-b2e0-60745333e188" class="rounded-circle" height="40" alt="" loading="lazy" />
+          </a>
+        </li>
+      </ul>
+      &nbsp;&nbsp;
+
+      <button (click)="logout()" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</button>
+    </div>
+  </nav>
+</header>
+
+
+<main style="margin-top: 58px">
+  <div class="container pt-4">
+
+    <!-- Contact Form Section -->
+    <div class="content">
+      <div class="container">
+        <div class="row align-items-stretch no-gutters contact-wrap">
+          <div class="col-md-8">
+            <div class="form h-100">
+              <h3>Mesaj Gönder</h3>
+              <form (ngSubmit)="sendMail()" class="mb-5" method="post" id="contactForm" name="contactForm">
+
+                <!-- Name and Phone Inputs -->
+                <div class="row">
+                  <div class="col-md-6 form-group mb-4">
+                    <label for="name" class="col-form-label">İsim *</label>
+                    <input type="text" class="form-control" [(ngModel)]="name" name="name" id="name" placeholder="İsim">
+                  </div>
+                  <div class="col-md-6 form-group mb-4">
+                    <label for="phone" class="col-form-label">Telefon *</label>
+                    <input type="text" class="form-control" [(ngModel)]="phone" name="phone" id="phone" placeholder="Telefon">
+                  </div>
+                </div>
+              
+                <!-- E-mail Input -->
+                <div class="row">
+                  <div class="col-md-12 form-group mb-4">
+                    <label for="email" class="col-form-label">E-Posta *</label>
+                    <input type="text" class="form-control" [(ngModel)]="email" name="email" id="email" placeholder="E-Posta">
+                  </div>
+                </div>
+              
+                <!-- Message Textarea -->
+                <div class="row">
+                  <div class="col-md-12 form-group mb-4">
+                    <label for="message" class="col-form-label">Mesajınız *</label>
+                    <textarea class="form-control" [(ngModel)]="message" name="message" id="message" cols="30" rows="4" placeholder="Mesajınızı yazın"></textarea>
+                  </div>
+                </div>
+              
+                <!-- Submit Button -->
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+                  </div>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

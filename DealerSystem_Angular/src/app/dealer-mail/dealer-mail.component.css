@@ -1,0 +1,227 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+/* header */
+
+  /* ------------------------nav bar -------------- */
+  
+  /* Header stil */
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+  }
+  
+  .header h1 {
+    width: 30%;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav ul li {
+    margin-right: 20px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  
+  .nav ul li:hover {
+    border-color: #202823;
+    color: #202823;
+    cursor: pointer;
+  }
+  
+  .nav ul li.active {
+    border-color: #202823;
+    color: #202823;
+  }
+  
+  /* Link stil */
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #202823;
+  }
+  
+  /* Sepet ve Arama ikonları */
+  /* Sepet ve Arama ikonları */
+  .header .w-3\/12 {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .header .w-3\/12 a {
+    margin-right: 20px;
+    transition: color 0.3s;
+  }
+  
+  .header .w-3\/12 a:hover {
+    color: #22C55E;
+  }
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fff;
+    line-height: 1.9;
+    color: #8c8c8c;
+    position: relative; }
+    body:before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #8bbabb; }
+  
+ h2, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto", sans-serif;
+    color: #000; }
+  
+  
+  
+  .text-black {
+    color: #000; }
+  
+  .content {
+    padding: 7rem 0; }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 900; }
+  
+  .form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    background: none; }
+    .form-control:active, .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-color: #000; }
+  
+  .col-form-label {
+    color: #000;
+    font-size: 13px; }
+  
+  .btnn, .form-control, .custom-select {
+    height: 45px; }
+  
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+  
+  .contact-wrap {
+    -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2); }
+    .contact-wrap .col-form-label {
+      font-size: 14px;
+      color: #b3b3b3;
+      margin: 0 0 10px 0;
+      display: inline-block;
+      padding: 0; }
+    .contact-wrap .form, .contact-wrap .contact-info {
+      padding: 40px; }
+    .contact-wrap .contact-info {
+      color: rgba(255, 255, 255, 0.5); }
+      .contact-wrap .contact-info ul li {
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.5); }
+        .contact-wrap .contact-info ul li .wrap-icon {
+          font-size: 20px;
+          color: #fff;
+          margin-top: 5px; }
+    .contact-wrap .form {
+      background: #fff; }
+      .contact-wrap .form h3 {
+        color: #35477d;
+        font-size: 20px;
+        margin-bottom: 30px; }
+    .contact-wrap .contact-info {
+      background: #35477d; }
+      .contact-wrap .contact-info h3 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 30px; }
+  
+  label.error {
+    font-size: 12px;
+    color: red; }
+  
+  #message {
+    resize: vertical; }
+  
+  #form-message-warning, #form-message-success {
+    display: none; }
+  
+  #form-message-warning {
+    color: #B90B0B; }
+  
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold; }
+  
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000; }
+  
+
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 11%;
+  }
+
+  .content {
+    margin-top: 70px; /* Navbar yüksekliği kadar margin ekleyerek content'in üzerine gelmemesini sağlar */
+  }
+
+  .nav-link {
+    font-size: 20px; /* Yazı büyüklüğü buradan ayarlanabilir */
+  }

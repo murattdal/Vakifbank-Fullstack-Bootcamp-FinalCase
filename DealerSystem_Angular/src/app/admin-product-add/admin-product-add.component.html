@@ -1,0 +1,97 @@
+<!-- Font Awesome Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-qFviL5ONzNlV02GYi+P5H2/Wl2qRjU6g0BpHL1zmeGk9lreG9oIAGToG1vbACvz5Xqg1d+ZQ6eC1FYgFzsFaSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Header -->
+<header>
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a routerLink="/AdminPage" href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Anasayfa</span>
+        </a>
+
+        <a routerLink="/AdminStockControl" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Stok Kontrolü</span>
+        </a>
+
+        <a routerLink="/AdminProductAdd" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-plus fa-fw me-3"></i><span>Ürün Ekleme</span>
+        </a>
+
+        <a routerLink="/AdminInfo" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-bar fa-fw me-3"></i><span>Rapor</span>
+        </a>
+
+        <a routerLink="/AdminDealerInquiry" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-building fa-fw me-3"></i><span>Bayiler</span>
+        </a>
+
+        <a routerLink="/AdminDealerAdd" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-plus fa-fw me-3"></i><span>Bayi Ekleme</span>
+        </a>
+
+        <a routerLink="/AdminMail" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-envelope fa-fw me-3"></i><span>Mail Gönderme</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <h6 class="w-2/12 text-center" style="width: 100px;" alt="logo">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+          <span style="font-size: 1.5 em; color: #ff6219;">YÖNETİCİ PANELİ</span>
+        </div>
+      </h6>
+
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <li class="nav-item dropdown">
+          <a routerLink="/AdminPage" class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="https://firebasestorage.googleapis.com/v0/b/socialuni-5ab73.appspot.com/o/assets%2Ficons%2Fic_avatar6.png?alt=media&token=aa9b868c-b5ac-4cb1-b2e0-60745333e188" class="rounded-circle" height="40" alt="" loading="lazy" />
+          </a>
+        </li>
+      </ul>
+      &nbsp;&nbsp;
+
+      <button (click)="logout()" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</button>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Navigation -->
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+        <!-- Product Form -->
+        <form (ngSubmit)="submitProductForm()">
+            <div class="mb-3">
+                <label for="productName" class="form-label">Ürün Adı:</label>
+            <input type="text" class="form-control" id="productName" [(ngModel)]="ProductName" name="productName">
+            </div>
+    
+            <div class="mb-3">
+                <label for="productImage" class="form-label">Ürün URL:</label>
+            <input type="text" class="form-control" id="productImage" [(ngModel)]="ProductImage" name="productImage">
+            </div>
+    
+            <div class="mb-3">
+                <label for="productQuantity" class="form-label">Ürün Miktarı:</label>
+            <input type="number" class="form-control" id="productQuantity" [(ngModel)]="ProductQuantity" name="productQuantity">
+            </div>
+    
+            <div class="mb-3">
+                <label for="productPrice" class="form-label">Ürün Fiyatı:</label>
+            <input type="number" class="form-control" id="productPrice" [(ngModel)]="ProductPrice" name="productPrice">
+            </div>
+    
+            <div class="mb-3">
+                <label for="productInformation" class="form-label">Ürün Bilgisi:</label>
+            <textarea class="form-control" id="productInformation" [(ngModel)]="ProductInformation" name="productInformation"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+    </div>
+</main>
